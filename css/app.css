@@ -1,3 +1,8 @@
+@font-face { 
+    font-family: bots;
+    src: url(../police/Battle\ Bots.otf);
+}
+
 html, body {
     background-color: #121212;
 }
@@ -13,6 +18,8 @@ header > img {
     text-align: center;
     justify-content: center;
     font-size: 4em;
+    font-family: bots;
+    text-shadow: 0 0 1px #0e9e4a, 0 0 2px #0e9e4a, 0 0 3px #0e9e4a, 0 0 4px #0e9e4a, 0 0 5px #0e9e4a, 0 0 6px #0e9e4a, 0 0 7px #0e9e4a;
 }
 
 .presentation > h3 {
