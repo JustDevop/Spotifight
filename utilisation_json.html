@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affichage des Musiques</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .person {
+            margin-bottom: 20px;
+        }
+        .person h2 {
+            margin: 0;
+        }
+        .musiques {
+            list-style-type: none;
+            padding: 0;
+        }
+        .musiques li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Liste des Musiques</h1>
+    <div id="content"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "musiques.json", true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    var contentDiv = document.getElementById("content");
+
+                    for (var person in data) {
+                        if (data.hasOwnProperty(person)) {
+                            var personDiv = document.createElement("div");
+                            personDiv.className = "person";
+
+                            var personName = document.createElement("h2");
+                            personName.textContent = person;
+                            personDiv.appendChild(personName);
+
+                            var musiquesList = document.createElement("ul");
+                            musiquesList.className = "musiques";
+
+                            data[person].musiques.forEach(function(musique) {
+                                var musiqueItem = document.createElement("li");
+                                musiqueItem.textContent = musique;
+                                musiquesList.appendChild(musiqueItem);
+                            });
+
+                            personDiv.appendChild(musiquesList);
+                            contentDiv.appendChild(personDiv);
+                        }
+                    }
+                }
+            };
+            xhr.send();
+        });
+    </script>
+</body>
+</html>
