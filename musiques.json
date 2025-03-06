@@ -1,0 +1,37 @@
+{
+    "Justine": {
+        "musiques": [
+            "Song Title 1",
+            "Song Title 2",
+            "Song Title 3"
+        ]
+    },
+    "Jarode": {
+        "musiques": [
+            "Song Title 4",
+            "Song Title 5",
+            "Song Title 6"
+        ]
+    },
+    "Morgane": {
+        "musiques": [
+            "Song Title 7",
+            "Song Title 8",
+            "Song Title 9"
+        ]
+    },
+    "Benjamin": {
+        "musiques": [
+            "Song Title 10",
+            "Song Title 11",
+            "Song Title 12"
+        ]
+    },
+    "Sacha": {
+        "musiques": [
+            "Song Title 13",
+            "Song Title 14",
+            "Song Title 15"
+        ]
+    }
+}

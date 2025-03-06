@@ -21,10 +21,6 @@ Listez ici les fonctionnalités mises en place dans votre projet :
 - HTML, CSS
 - JS, AJAX
 
-### Frameworks
-- Framework 1
-- Framework 2
-
 ## Organisation du Groupe
 Expliquez ici la stratégie adoptée pour l'organisation du travail au sein du groupe :
 - Une personne par page
