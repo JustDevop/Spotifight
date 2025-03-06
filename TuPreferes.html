@@ -31,8 +31,6 @@
         
     </div>
 
-    <button onclick="startBattle()">Commencer la bataille</button>
-
 </body>
 
 <style>
@@ -67,12 +65,12 @@ const musiques = [
     { titre: "Musique 6", couverture: "placeholder/orange.png" }
 ];
 
+let ProchainRound = [];
 
 
 
 
-
-
+//-----------------------------------------------// FONCTIONS //-----------------------------------------------//
 
 
 // Fonction pour choisir deux musiques aléatoires et afficher leurs couvertures
@@ -85,6 +83,9 @@ function startBattle() {
     while (index1 === index2) {
         index2 = Math.floor(Math.random() * musiques.length);
     }
+    while (index1 === index2) {
+        index2 = Math.floor(Math.random() * musiques.length);
+    }
 
     // Récupérer les musiques choisies
     const musique1 = musiques[index1];
@@ -92,9 +93,34 @@ function startBattle() {
 
     // Afficher les couvertures des deux musiques dans les balises <img>
     document.getElementById('CoverMusique1').src = musique1.couverture;
+    document.getElementById('CoverMusique1').alt = musique1.titre;
+
     document.getElementById('CoverMusique2').src = musique2.couverture;
+    document.getElementById('CoverMusique2').alt = musique2.titre;
 }
-// test
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Hello World!");
+  startBattle();
+});
+
+function selectRound(values){
+    console.log (values);
+    ProchainRound=[values];
+    console.table (ProchainRound);
+    startBattle();
+}
+
+
+//-----------------------------------------------//CLICS GESTION //-----------------------------------------------//
+document.getElementById('CoverMusique1').addEventListener('click', function() {
+    selectRound(this.alt);
+});
+
+document.getElementById('CoverMusique2').addEventListener('click', function() {
+    selectRound(this.alt);
+});
+
 </script>
 
 </html>
