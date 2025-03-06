@@ -1,10 +1,12 @@
 # Projet de Groupe
 Nom du projet : Spotifight
+
 ## Slogen
 Choisis ton son, défends ta vibe
+
 ## Sujet
 Battle de musique Spotify en fonction des gouts personnel du groupe 
-avec resultat et Top des joueurs 
+avec resultat et Top musicaux des joueurs 
 
 ## Composition du Groupe
 - Jarode Pottin 
@@ -19,6 +21,8 @@ Listez ici les fonctionnalités mises en place dans votre projet :
 - Classement des musiques les plus choisis 
 
 ## Techniques Choisies
+- utilisation de git hub 
+
 ### Langages
 - HTML, CSS
 - JS, AJAX, Json 
@@ -31,7 +35,7 @@ Expliquez ici la stratégie adoptée pour l'organisation du travail au sein du g
 
 ## Difficultés Rencontrées
 Décrivez les difficultés que vous avez rencontrées et les solutions que vous avez mises en œuvre :
-- Difficulté 1 et solution
+- mise en commun des fichiers = Github
 - Difficulté 2 et solution
 - Difficulté 3 et solution
 
@@ -39,4 +43,5 @@ Décrivez les difficultés que vous avez rencontrées et les solutions que vous 
 Expliquez comment vous avez organisé vos fichiers, par exemple :
 - Regroupement des fichiers CSS
 - Regroupement des images dans un fichiers images
+- Regroupement des fichiers JS 
 - Structure des dossiers
