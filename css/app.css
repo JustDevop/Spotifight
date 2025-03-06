@@ -66,7 +66,7 @@ a:hover {
 }
 
 /*BOUTON FIGHT*/
-#fightButton {
+a #fightButton {
     display: block;
     margin: 20px auto;
     padding: 15px 30px;
@@ -76,11 +76,13 @@ a:hover {
     border-radius: 5px;
     font-family: bots;
     font-size: 1.5em;
+    text-align: center;
     cursor: pointer;
     transition: background-color .3s, transform .3s;
+    text-decoration: none;
 }
 
-#fightButton:hover {
+a #fightButton:hover {
     background-color: #1bb150;
     transform: scale(1.05);
 }
