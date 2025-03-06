@@ -55,64 +55,184 @@
 </style>
 
 <script>
-// Tableau de musiques avec leurs couvertures d'album
-const musiques = [
-    { titre: "Musique 1", couverture: "placeholder/rose.png" },
-    { titre: "Musique 2", couverture: "placeholder/bleu.png" },
-    { titre: "Musique 3", couverture: "placeholder/Fushia.png" },
-    { titre: "Musique 4", couverture: "placeholder/Sable.png" },
-    { titre: "Musique 5", couverture: "placeholder/Marron.png" },
-    { titre: "Musique 6", couverture: "placeholder/orange.png" }
+
+
+
+
+const MUSIQUES = [
+    { titre: "Musique 1/Rose", couverture: "placeholder/rose.png", index:"1" },
+    { titre: "Musique 2/Bleu", couverture: "placeholder/bleu.png", index:"2"},
+    { titre: "Musique 3/Fushia", couverture: "placeholder/Fushia.png", index:"3" },
+    { titre: "Musique 4/Sable", couverture: "placeholder/Sable.png" , index:"4"},
+    { titre: "Musique 5/Marron", couverture: "placeholder/Marron.png", index:"5" },
+    { titre: "Musique 5/Marron", couverture: "placeholder/Marron.png", index:"6" },
+    { titre: "Musique 6/Orange", couverture: "placeholder/orange.png" , index:"7"}
 ];
 
+let Round= MUSIQUES;
 let ProchainRound = [];
-
-
-
+let Historique = [];
+let HistoriqueTitre = [];
 
 //-----------------------------------------------// FONCTIONS //-----------------------------------------------//
 
-
 // Fonction pour choisir deux musiques aléatoires et afficher leurs couvertures
-function startBattle() {
-    // Choisir deux indices aléatoires
-    let index1 = Math.floor(Math.random() * musiques.length);
-    let index2 = Math.floor(Math.random() * musiques.length);
+function startBattle() {    
+    let index1, index2;
     
-    // S'assurer que les deux musiques sont différentes
-    while (index1 === index2) {
-        index2 = Math.floor(Math.random() * musiques.length);
+    // Vérifier que les musiques choisies ne sont pas déjà passées
+    const indicesDisponibles = Round.map((_, i) => i).filter(i => !Historique.includes(i));
+
+    // Si une seule musique reste et que c'est la finale
+    if (Round.length === 1) {
+        afficherVainqueur(Round[0]);
+        return;
     }
-    while (index1 === index2) {
-        index2 = Math.floor(Math.random() * musiques.length);
+
+    // Si une seule musique reste pour le prochain round, elle est qualifiée d'office
+    if (indicesDisponibles.length === 1) {
+        console.log("Musique restante ajoutée au prochain round :", Round[indicesDisponibles[0]].titre);
+        ProchainRound.push(Round[indicesDisponibles[0]]);
+        indicesDisponibles.pop(); // Supprime cette musique de la sélection
     }
 
-    // Récupérer les musiques choisies
-    const musique1 = musiques[index1];
-    const musique2 = musiques[index2];
+    // Vérifier qu'il reste assez de musiques pour un duel
+    if (indicesDisponibles.length < 2) {
+        console.log("Fin de manche");
+        Historique = [];
+        Round = [...ProchainRound]; // On recharge les musiques sélectionnées pour la manche suivante
+        ProchainRound = [];
+        startBattle();
+        return;
+    }
 
-    // Afficher les couvertures des deux musiques dans les balises <img>
-    document.getElementById('CoverMusique1').src = musique1.couverture;
-    document.getElementById('CoverMusique1').alt = musique1.titre;
+    // Sélectionner deux indices distincts parmi ceux encore disponibles
+    index1 = indicesDisponibles[Math.floor(Math.random() * indicesDisponibles.length)];
+    do {
+        index2 = indicesDisponibles[Math.floor(Math.random() * indicesDisponibles.length)];
+    } while (index1 === index2);
 
-    document.getElementById('CoverMusique2').src = musique2.couverture;
-    document.getElementById('CoverMusique2').alt = musique2.titre;
+    // Récupérer les musiques correspondantes
+    const MUSIQUE1 = Round[index1];
+    const MUSIQUE2 = Round[index2];
+
+    // Afficher les couvertures des deux musiques
+    document.getElementById('CoverMusique1').src = MUSIQUE1.couverture;
+    document.getElementById('CoverMusique1').alt = MUSIQUE1.titre;
+
+    document.getElementById('CoverMusique2').src = MUSIQUE2.couverture;
+    document.getElementById('CoverMusique2').alt = MUSIQUE2.titre;
+
+    // Ajouter les indices dans l'historique pour ne pas les rejouer
+    Historique.push(index1, index2);
+    console.table(Historique);
 }
 
+function selectRound(titreSelectionne) {
+    // Trouver l'objet correspondant dans MUSIQUES
+    const musiqueSelectionnee = MUSIQUES.find(m => m.titre === titreSelectionne);
+
+    if (musiqueSelectionnee) {
+        // Ajouter l'objet complet au tableau ProchainRound
+        ProchainRound.push({ titre: musiqueSelectionnee.titre, couverture: musiqueSelectionnee.couverture });
+    }
+
+    console.table(ProchainRound);
+
+    if (Historique.length >= Round.length) {
+        console.log("Fin de manche-------------------");
+        Historique = [];
+        Round = ProchainRound;
+
+        // Si on arrive à une seule musique, afficher le vainqueur
+        if (Round.length === 1) {
+            afficherVainqueur(Round[0]);
+            return;
+        }
+
+        ProchainRound = [];
+        startBattle();
+    } else {
+        startBattle();
+    }
+}
+
+function afficherVainqueur(vainqueur) {
+    // Modifier le texte pour annoncer le gagnant
+    document.querySelector("h1").textContent = "Vainqueur !";
+    document.querySelector("h2").textContent = `La meilleure musique selon votre vote est : ${vainqueur.titre}`;
+
+    // Afficher uniquement la première image avec le vainqueur
+    document.getElementById("CoverMusique1").src = vainqueur.couverture;
+    document.getElementById("CoverMusique1").alt = vainqueur.titre;
+    document.getElementById("Musique1").style.display = "block";
+
+    // Cacher l'autre image
+    document.getElementById("CoverMusique2").style.display = "none";
+
+    // Afficher le top 3 en dessous
+    let top3 = Round.slice(-3).reverse(); // Prendre les 3 derniers en inversant l'ordre
+    let top3HTML = `<h3>Top 3 :</h3><ol>`;
+    top3.forEach(m => {
+        top3HTML += `<li>${m.titre}</li>`;
+    });
+    top3HTML += `</ol>`;
+
+    let divTop3 = document.createElement("div");
+    divTop3.innerHTML = top3HTML;
+    document.body.appendChild(divTop3);
+}
+
+//-----------------------------------------------// GESTION DOCUMENT //-----------------------------------------------//
+
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Hello World!");
   startBattle();
 });
 
-function selectRound(values){
-    console.log (values);
-    ProchainRound=[values];
-    console.table (ProchainRound);
-    startBattle();
+document.getElementById('CoverMusique1').addEventListener('click', function() {
+    selectRound(this.alt);
+});
+
+document.getElementById('CoverMusique2').addEventListener('click', function() {
+    selectRound(this.alt);
+});
+
+
+
+
+
+function selectRound(titreSelectionne) {
+    // Trouver l'objet correspondant dans MUSIQUES
+    const musiqueSelectionnee = MUSIQUES.find(m => m.titre === titreSelectionne);
+
+    if (musiqueSelectionnee) {
+        // Ajouter l'objet complet au tableau ProchainRound
+        ProchainRound.push({ titre: musiqueSelectionnee.titre, couverture: musiqueSelectionnee.couverture });
+    }
+
+    console.table(ProchainRound);
+
+    if (Historique.length >= Round.length) {
+        console.log("Fin de manche-------------------");
+        Historique = [];
+        Round = ProchainRound;
+        // console.table(Round);
+        ProchainRound = [];
+
+        startBattle();
+
+    } else {
+        startBattle();
+    }
 }
 
+//-----------------------------------------------// GESTION DOCUMENT //-----------------------------------------------//
 
-//-----------------------------------------------//CLICS GESTION //-----------------------------------------------//
+//demarer lors du chargement de la page
+document.addEventListener("DOMContentLoaded", () => {
+  startBattle();
+});
+
 document.getElementById('CoverMusique1').addEventListener('click', function() {
     selectRound(this.alt);
 });
