@@ -61,6 +61,30 @@ h1 {
     text-shadow: 0 0 0px #0e9e4a, 0 0 1px #0e9e4a, 0 0 2px #0e9e4a, 0 0 3px #0e9e4a, 0 0 4px #0e9e4a, 0 0 5px #0e9e4a, 0 0 6px #0e9e4a;
 }
 
+/*MUSIQUES*/
+.musique {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.musique p {
+    background-color: #282828;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    width: 80%;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+    transition: background-color .3s;
+}
+
+.musique p:hover {
+    background-color: #1ED760;
+    color: #121212;
+}
 /*FOOTER*/
 footer > p {
     padding-top: 32%;
