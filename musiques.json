@@ -1,146 +1,522 @@
 {
     "Justine": {
         "musiques": [
-            "Cooler Than Me - Mike Posner",
-            "Same Old Love - Selena Gomez",
-            "That's So True - Gracie Abrams",
-            "Dance Monkey - Tones and I",
-            "Petit Papa Noël - Tino Rossi",
-            "Crystalised - The xx",
-            "Bloom - Lucas Estrada",
-            "Nous deux contre le reste du monde - Ben Mazué",
-            "1984 - Mauve",
-            "Heatstroke - Calvin Harris",
-            "Thinking About You - Calvin Harris",
-            "Hit Sale - Therapie TAXI / Roméo Elvis",
-            "La lettre - Renan Luce",
-            "Ton invitation - Louise Attaque",
-            "Mais je t'aime - Grand Corps Malade",
-            "Un jour je marierai un ange - Pierre de Maere",
-            "Tsunami - DVBBS & Borgeous",
-            "Every Breath You Take - The Police",
-            "Cold Heart - Elton John / Dua Lipa / PNAU",
-            "Bailar - Deorro / Elvis Crespo",
-            "Calm Down - Rema",
-            "Brother - Kodaline",
-            "Viva La Vida - Coldplay",
-            "Runaway - AURORA",
-            "Treasure - Bruno Mars"
+            {
+                "titre": "Cooler Than Me - Mike Posner",
+                "image": "couverture/cooler_than_me.jpg"
+            },
+            {
+                "titre": "Same Old Love - Selena Gomez",
+                "image": "couverture/same_old_love.jpg"
+            },
+            {
+                "titre": "That's So True - Gracie Abrams",
+                "image": "couverture/thats_so_true.jpg"
+            },
+            {
+                "titre": "Dance Monkey - Tones and I",
+                "image": "couverture/dance_monkey.jpg"
+            },
+            {
+                "titre": "Petit Papa Noël - Tino Rossi",
+                "image": "couverture/petit_papa_noel.jpg"
+            },
+            {
+                "titre": "Crystalised - The xx",
+                "image": "couverture/crystalised.jpg"
+            },
+            {
+                "titre": "Bloom - Lucas Estrada",
+                "image": "couverture/bloom.jpg"
+            },
+            {
+                "titre": "Nous deux contre le reste du monde - Ben Mazué",
+                "image": "couverture/nous_deux.jpg"
+            },
+            {
+                "titre": "1984 - Mauve",
+                "image": "couverture/1984.jpg"
+            },
+            {
+                "titre": "Heatstroke - Calvin Harris",
+                "image": "couverture/heatstroke.jpg"
+            },
+            {
+                "titre": "Thinking About You - Calvin Harris",
+                "image": "couverture/thinking_about_you.jpg"
+            },
+            {
+                "titre": "Hit Sale - Therapie TAXI / Roméo Elvis",
+                "image": "couverture/hit_sale.jpg"
+            },
+            {
+                "titre": "La lettre - Renan Luce",
+                "image": "couverture/la_lettre.jpg"
+            },
+            {
+                "titre": "Ton invitation - Louise Attaque",
+                "image": "couverture/ton_invitation.jpg"
+            },
+            {
+                "titre": "Mais je t'aime - Grand Corps Malade",
+                "image": "couverture/mais_je_taime.jpg"
+            },
+            {
+                "titre": "Un jour je marierai un ange - Pierre de Maere",
+                "image": "couverture/un_jour_je_marierai_un_ange.jpg"
+            },
+            {
+                "titre": "Tsunami - DVBBS & Borgeous",
+                "image": "couverture/tsunami.jpg"
+            },
+            {
+                "titre": "Every Breath You Take - The Police",
+                "image": "couverture/every_breath_you_take.jpg"
+            },
+            {
+                "titre": "Cold Heart - Elton John / Dua Lipa / PNAU",
+                "image": "couverture/cold_heart.jpg"
+            },
+            {
+                "titre": "Bailar - Deorro / Elvis Crespo",
+                "image": "couverture/bailar.jpg"
+            },
+            {
+                "titre": "Calm Down - Rema",
+                "image": "couverture/calm_down.jpg"
+            },
+            {
+                "titre": "Brother - Kodaline",
+                "image": "couverture/brother.jpg"
+            },
+            {
+                "titre": "Viva La Vida - Coldplay",
+                "image": "couverture/viva_la_vida.jpg"
+            },
+            {
+                "titre": "Runaway - AURORA",
+                "image": "couverture/runaway.jpg"
+            },
+            {
+                "titre": "Treasure - Bruno Mars",
+                "image": "couverture/treasure.jpg"
+            }
         ]
     },
     "Jarode": {
         "musiques": [
-            "Not Your Man - 20:02",
-            "Guys don't like me - it Boys !",
-            "Fantôme - YustonXIII",
-            "Against the tide - Sail North",
-            "Out of my mind - Gentrammel",
-            "Je m'en fou - Ridsa",
-            "World's smallest violin - AJR ",
-            "Time - NF",
-            "fuck this town - glaive / Ericdoa",
-            "Paradis - Orelsan",
-            "Feed the machine - Poor Man's Poison",
-            "Le Monde : From talk to me - Richard Carter",
-            "Imagine - Carbonne",
-            "Locked out of Heaven - Bruno mars",
-            "Alice - petit voyou",
-            "Lone digger - Caravan palace",
-            "7 years - Lukas Graham",
-            "R66 - YustonXIII",
-            "Mercy - Shawn Mendes",
-            "Let the world burn - Chris Grey",
-            "Skin of a saint - Connor Kauffman",
-            "The hanging tree - James newton howard",
-            "Mistake - NF",
-            "Wolf in Sheep's Clothing [Reborn] - Set it off",
-            "What i've done - Linkin Park"
+            {
+                "titre": "Not Your Man - 20:02",
+                "image": "couverture/not_your_man.jpg"
+            },
+            {
+                "titre": "Guys don't like me - it Boys !",
+                "image": "couverture/guys_dont_like_me.jpg"
+            },
+            {
+                "titre": "Fantôme - YustonXIII",
+                "image": "couverture/fantome.jpg"
+            },
+            {
+                "titre": "Against the tide - Sail North",
+                "image": "couverture/against_the_tide.jpg"
+            },
+            {
+                "titre": "Out of my mind - Gentrammel",
+                "image": "couverture/out_of_my_mind.jpg"
+            },
+            {
+                "titre": "Je m'en fou - Ridsa",
+                "image": "couverture/je_men_fou.jpg"
+            },
+            {
+                "titre": "World's smallest violin - AJR ",
+                "image": "couverture/worlds_smallest_violin.jpg"
+            },
+            {
+                "titre": "Time - NF",
+                "image": "couverture/time.jpg"
+            },
+            {
+                "titre": "fuck this town - glaive / Ericdoa",
+                "image": "couverture/fuck_this_town.jpg"
+            },
+            {
+                "titre": "Paradis - Orelsan",
+                "image": "couverture/paradis.jpg"
+            },
+            {
+                "titre": "Feed the machine - Poor Man's Poison",
+                "image": "couverture/feed_the_machine.jpg"
+            },
+            {
+                "titre": "Le Monde : From talk to me - Richard Carter",
+                "image": "couverture/le_monde.jpg"
+            },
+            {
+                "titre": "Imagine - Carbonne",
+                "image": "couverture/imagine.jpg"
+            },
+            {
+                "titre": "Locked out of Heaven - Bruno mars",
+                "image": "couverture/locked_out_of_heaven.jpg"
+            },
+            {
+                "titre": "Alice - petit voyou",
+                "image": "couverture/alice.jpg"
+            },
+            {
+                "titre": "Lone digger - Caravan palace",
+                "image": "couverture/lone_digger.jpg"
+            },
+            {
+                "titre": "7 years - Lukas Graham",
+                "image": "couverture/7_years.jpg"
+            },
+            {
+                "titre": "R66 - YustonXIII",
+                "image": "couverture/r66.jpg"
+            },
+            {
+                "titre": "Mercy - Shawn Mendes",
+                "image": "couverture/mercy.jpg"
+            },
+            {
+                "titre": "Let the world burn - Chris Grey",
+                "image": "couverture/let_the_world_burn.jpg"
+            },
+            {
+                "titre": "Skin of a saint - Connor Kauffman",
+                "image": "couverture/skin_of_a_saint.jpg"
+            },
+            {
+                "titre": "The hanging tree - James newton howard",
+                "image": "couverture/the_hanging_tree.jpg"
+            },
+            {
+                "titre": "Mistake - NF",
+                "image": "couverture/mistake.jpg"
+            },
+            {
+                "titre": "Wolf in Sheep's Clothing [Reborn] - Set it off",
+                "image": "couverture/wolf_in_sheeps_clothing.jpg"
+            },
+            {
+                "titre": "What i've done - Linkin Park",
+                "image": "couverture/what_ive_done.jpg"
+            }
         ]
     },
     "Morgane": {
         "musiques": [
-            "Through the fire and flames - Dragon Force",
-            "Bad apple - Richaadeb / Cristia Vee",
-            "Murmaider - Metalocalypse: Deathklok",
-            "Enter Sandman - Metallica",
-            "Diggy Diggy Hole - Wind rose",
-            "Stereo - Elephanz",
-            "Half Horse Half Man - OCT",
-            "Bloody footprints in the snow - Blackbriar",
-            "The Kelpiie - Kiki Rockwell",
-            "La marche des Barbares - Pen of Chaos / Naheulband",
-            "Hoist the Colours - The Wellermen",
-            "Twin Shadow - Canine",
-            "CHIHIRO - Billie Eilish",
-            "Miku - Anamanaguchi / Hatsune Miku",
-            "Closer to the moon - Anya Nami",
-            "Sharks - Imagine Dragons",
-            "The Line - Twenty One Pilots",
-            "Aria Math - C418",
-            "i'm Picky - Shaka Ponk",
-            "Harpy Hare - Yaelorke",
-            "Harder, Better, Faster, Stronger - Daft Punk",
-            "The Reckoning - Within Temptation",
-            "Rosenrot - Rammstein",
-            "Armee der Tristen - Rammstein"
+            {
+                "titre": "Through the fire and flames - Dragon Force",
+                "image": "couverture/through_the_fire_and_flames.jpg"
+            },
+            {
+                "titre": "Bad apple - Richaadeb / Cristia Vee",
+                "image": "couverture/bad_apple.jpg"
+            },
+            {
+                "titre": "Murmaider - Metalocalypse: Deathklok",
+                "image": "couverture/murmaider.jpg"
+            },
+            {
+                "titre": "Enter Sandman - Metallica",
+                "image": "couverture/enter_sandman.jpg"
+            },
+            {
+                "titre": "Diggy Diggy Hole - Wind rose",
+                "image": "couverture/diggy_diggy_hole.jpg"
+            },
+            {
+                "titre": "Stereo - Elephanz",
+                "image": "couverture/stereo.jpg"
+            },
+            {
+                "titre": "Half Horse Half Man - OCT",
+                "image": "couverture/half_horse_half_man.jpg"
+            },
+            {
+                "titre": "Bloody footprints in the snow - Blackbriar",
+                "image": "couverture/bloody_footprints.jpg"
+            },
+            {
+                "titre": "The Kelpiie - Kiki Rockwell",
+                "image": "couverture/the_kelpiie.jpg"
+            },
+            {
+                "titre": "La marche des Barbares - Pen of Chaos / Naheulband",
+                "image": "couverture/la_marche_des_barbares.jpg"
+            },
+            {
+                "titre": "Hoist the Colours - The Wellermen",
+                "image": "couverture/hoist_the_colours.jpg"
+            },
+            {
+                "titre": "Twin Shadow - Canine",
+                "image": "couverture/twin_shadow.jpg"
+            },
+            {
+                "titre": "CHIHIRO - Billie Eilish",
+                "image": "couverture/chihiro.jpg"
+            },
+            {
+                "titre": "Bread - Anya Nami",
+                "image": "couverture/bread.jpg"
+            },
+            {
+                "titre": "Miku - Anamanaguchi / Hatsune Miku",
+                "image": "couverture/miku.jpg"
+            },
+            {
+                "titre": "Closer to the moon - Anya Nami",
+                "image": "couverture/closer_to_the_moon.jpg"
+            },
+            {
+                "titre": "Sharks - Imagine Dragons",
+                "image": "couverture/sharks.jpg"
+            },
+            {
+                "titre": "The Line - Twenty One Pilots",
+                "image": "couverture/the_line.jpg"
+            },
+            {
+                "titre": "Aria Math - C418",
+                "image": "couverture/aria_math.jpg"
+            },
+            {
+                "titre": "i'm Picky - Shaka Ponk",
+                "image": "couverture/im_picky.jpg"
+            },
+            {
+                "titre": "Harpy Hare - Yaelorke",
+                "image": "couverture/harpy_hare.jpg"
+            },
+            {
+                "titre": "Harder, Better, Faster, Stronger - Daft Punk",
+                "image": "couverture/harder_better_faster_stronger.jpg"
+            },
+            {
+                "titre": "The Reckoning - Within Temptation",
+                "image": "couverture/the_reckoning.jpg"
+            },
+            {
+                "titre": "Rosenrot - Rammstein",
+                "image": "couverture/rosenrot.jpg"
+            },
+            {
+                "titre": "Armee der Tristen - Rammstein",
+                "image": "couverture/armee_der_tristen.jpg"
+            }
         ]
     },
     "Benjamin": {
         "musiques": [
-            "Stripped - Shiny Toy Guns",
-            "Beneath the Mask - Lyn",
-            "Sex on Fire - Kings of Leon",
-            "A Sky Full of Stars - Coldplay",
-            "Die With A Smile - Lady Gaga, Bruno Mars",
-            "Elf - Ado",
-            "Show（唱） - Ado",
-            "Numb - Linkin Park",
-            "オトノケ(Otonoke) - Creepy Nuts",
-            "The Forest - Petit Biscuit / Amixem",
-            "Sweden - C418",
-            "One More Time - Daft Punk",
-            "Never Gonna Give You Up - Rick Astley",
-            "L'aventurier - Indochine",
-            "Poison Hazbin Hotel - Blake Roman, Sam Haft, Andrew Underberg",
-            "Trop gentil - Trash Candide",
-            "Uprising - Muse",
-            "Banquet - Bloc Party",
-            "Copyright: Moi - ZeratoR",
-            "Overworld Day - Re-Logic",
-            "Hopes And Dreams - Toby Fox",
-            "Everytime We Touch - Cascada",
-            "After Dark - Mr.Kitty",
-            "Maniac - Carpenter Brut, Yann Ligner",
-            "Midnight City - M83"
+            {
+                "titre": "Stripped - Shiny Toy Guns",
+                "image": "couverture/stripped.jpg"
+            },
+            {
+                "titre": "Beneath the Mask - Lyn",
+                "image": "couverture/beneath_the_mask.jpg"
+            },
+            {
+                "titre": "Sex on Fire - Kings of Leon",
+                "image": "couverture/sex_on_fire.jpg"
+            },
+            {
+                "titre": "A Sky Full of Stars - Coldplay",
+                "image": "couverture/a_sky_full_of_stars.jpg"
+            },
+            {
+                "titre": "Die With A Smile - Lady Gaga, Bruno Mars",
+                "image": "couverture/die_with_a_smile.jpg"
+            },
+            {
+                "titre": "Elf - Ado",
+                "image": "couverture/elf.jpg"
+            },
+            {
+                "titre": "Show（唱） - Ado",
+                "image": "couverture/show.jpg"
+            },
+            {
+                "titre": "Numb - Linkin Park",
+                "image": "couverture/numb.jpg"
+            },
+            {
+                "titre": "オトノケ(Otonoke) - Creepy Nuts",
+                "image": "couverture/otonoke.jpg"
+            },
+            {
+                "titre": "The Forest - Petit Biscuit / Amixem",
+                "image": "couverture/the_forest.jpg"
+            },
+            {
+                "titre": "Sweden - C418",
+                "image": "couverture/sweden.jpg"
+            },
+            {
+                "titre": "One More Time - Daft Punk",
+                "image": "couverture/one_more_time.jpg"
+            },
+            {
+                "titre": "Never Gonna Give You Up - Rick Astley",
+                "image": "couverture/never_gonna_give_you_up.jpg"
+            },
+            {
+                "titre": "L'aventurier - Indochine",
+                "image": "couverture/laventurier.jpg"
+            },
+            {
+                "titre": "Poison Hazbin Hotel - Blake Roman, Sam Haft, Andrew Underberg",
+                "image": "couverture/poison_hazbin_hotel.jpg"
+            },
+            {
+                "titre": "Trop gentil - Trash Candide",
+                "image": "couverture/trop_gentil.jpg"
+            },
+            {
+                "titre": "Uprising - Muse",
+                "image": "couverture/uprising.jpg"
+            },
+            {
+                "titre": "Banquet - Bloc Party",
+                "image": "couverture/banquet.jpg"
+            },
+            {
+                "titre": "Copyright: Moi - ZeratoR",
+                "image": "couverture/copyright_moi.jpg"
+            },
+            {
+                "titre": "Overworld Day - Re-Logic",
+                "image": "couverture/overworld_day.jpg"
+            },
+            {
+                "titre": "Hopes And Dreams - Toby Fox",
+                "image": "couverture/hopes_and_dreams.jpg"
+            },
+            {
+                "titre": "Everytime We Touch - Cascada",
+                "image": "couverture/everytime_we_touch.jpg"
+            },
+            {
+                "titre": "After Dark - Mr.Kitty",
+                "image": "couverture/after_dark.jpg"
+            },
+            {
+                "titre": "Maniac - Carpenter Brut, Yann Ligner",
+                "image": "couverture/maniac.jpg"
+            },
+            {
+                "titre": "Midnight City - M83",
+                "image": "couverture/midnight_city.jpg"
+            }
         ]
     },
     "Sacha": {
         "musiques": [
-            "Let's Get It Started (Spike Mix) - The Black Eyed Peas",
-            "Brother Louie - Modern Talking",
-            "Keskya - Captain Sparks / Royal Compagny",
-            "I'm Outta Love - Anastacia",
-            "Let's Get Loud - Jennifer Lopez",
-            "Sunny - Marvin Gaye",
-            "Stayin Alive - Bee Gees",
-            "Virtual Insanity (Remastered 2006) - Jamiroquai",
-            "Drag Me Down - One Direction",
-            "Gimme! Gimme! Gimme! (A Man After Midnight) - ABBA",
-            "Thrift Shop (feat. Wanz) - Macklemore / Ryan Lewis",
-            "Bye Bye Bye - NSYNC",
-            "i'm Picky - Shaka Ponk",
-            "Lights - Ellie Goulding",
-            "Too Sweet - Hozier",
-            "CareLess Wisper - George Michael",
-            "The Chain - Fleetwood Mac",
-            "Moves Like Jagger - Maroon 5",
-            "Take Me To Church - Hozier",
-            "Rasputin - Boney M.",
-            "Dream On - Aerosmith",
-            "Feel Good Inc. - Gorillaz",
-            "Come and Get Your Love - Redbone",
-            "Cake By The Ocean - DNCE",
-            "Real Gone - Sheryl Crow"
+            {
+                "titre": "Let's Get It Started (Spike Mix) - The Black Eyed Peas",
+                "image": "couverture/lets_get_it_started.jpg"
+            },
+            {
+                "titre": "Brother Louie - Modern Talking",
+                "image": "couverture/brother_louie.jpg"
+            },
+            {
+                "titre": "Keskya - Captain Sparks / Royal Compagny",
+                "image": "couverture/keskya.jpg"
+            },
+            {
+                "titre": "I'm Outta Love - Anastacia",
+                "image": "couverture/im_outta_love.jpg"
+            },
+            {
+                "titre": "Let's Get Loud - Jennifer Lopez",
+                "image": "couverture/lets_get_loud.jpg"
+            },
+            {
+                "titre": "Sunny - Marvin Gaye",
+                "image": "couverture/sunny.jpg"
+            },
+            {
+                "titre": "Stayin Alive - Bee Gees",
+                "image": "couverture/stayin_alive.jpg"
+            },
+            {
+                "titre": "Virtual Insanity (Remastered 2006) - Jamiroquai",
+                "image": "couverture/virtual_insanity.jpg"
+            },
+            {
+                "titre": "Drag Me Down - One Direction",
+                "image": "couverture/drag_me_down.jpg"
+            },
+            {
+                "titre": "Gimme! Gimme! Gimme! (A Man After Midnight) - ABBA",
+                "image": "couverture/gimme_gimme_gimme.jpg"
+            },
+            {
+                "titre": "Thrift Shop (feat. Wanz) - Macklemore / Ryan Lewis",
+                "image": "couverture/thrift_shop.jpg"
+            },
+            {
+                "titre": "Bye Bye Bye - NSYNC",
+                "image": "couverture/bye_bye_bye.jpg"
+            },
+            {
+                "titre": "i'm Picky - Shaka Ponk",
+                "image": "couverture/im_picky.jpg"
+            },
+            {
+                "titre": "Lights - Ellie Goulding",
+                "image": "couverture/lights.jpg"
+            },
+            {
+                "titre": "Too Sweet - Hozier",
+                "image": "couverture/too_sweet.jpg"
+            },
+            {
+                "titre": "CareLess Wisper - George Michael",
+                "image": "couverture/careless_whisper.jpg"
+            },
+            {
+                "titre": "The Chain - Fleetwood Mac",
+                "image": "couverture/the_chain.jpg"
+            },
+            {
+                "titre": "Moves Like Jagger - Maroon 5",
+                "image": "couverture/moves_like_jagger.jpg"
+            },
+            {
+                "titre": "Take Me To Church - Hozier",
+                "image": "couverture/take_me_to_church.jpg"
+            },
+            {
+                "titre": "Rasputin - Boney M.",
+                "image": "couverture/rasputin.jpg"
+            },
+            {
+                "titre": "Dream On - Aerosmith",
+                "image": "couverture/dream_on.jpg"
+            },
+            {
+                "titre": "Feel Good Inc. - Gorillaz",
+                "image": "couverture/feel_good_inc.jpg"
+            },
+            {
+                "titre": "Come and Get Your Love - Redbone",
+                "image": "couverture/come_and_get_your_love.jpg"
+            },
+            {
+                "titre": "Cake By The Ocean - DNCE",
+                "image": "couverture/cake_by_the_ocean.jpg"
+            },
+            {
+                "titre": "Real Gone - Sheryl Crow",
+                "image": "couverture/real_gone.jpg"
+            }
         ]
     }
 }
