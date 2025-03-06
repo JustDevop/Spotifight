@@ -64,3 +64,23 @@ a:hover {
     font-size: 2em;
     font-weight: 100;
 }
+
+/*BOUTON FIGHT*/
+#fightButton {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px;
+    background-color: #1ED760;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    font-family: bots;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color .3s, transform .3s;
+}
+
+#fightButton:hover {
+    background-color: #1bb150;
+    transform: scale(1.05);
+}
