@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BattleZone</title>
+</head>
+<body>
+
+    <h1> Bienvenue sur la zone de Battle !!!</h1>
+
+    <h2>
+        Ici vous ferez vous affrontez vos goûts musicaux avec ceux des autres afin d'établir la TIERLISTE ULTIME !!! <br>
+        Cliquez sur l'une ou l'autre des images pour valider votre choix, et avancez jusqu'à la finale ! <br>
+        Que la fête COMMENCE ! 
+    </h2>
+
+    <div id="BattleZone">
+
+        <div id="Musique1">
+            <h3 id="titre"></h3> 
+            <h3 id="Chanteur"></h3>
+            <img src="/" alt="" id="CoverMusique1">
+        </div>
+
+        <div id="Musique1">
+            <h3 id="titre"></h3> 
+            <h3 id="Chanteur"></h3>         
+            <img src="/" alt="" id="CoverMusique2">
+        </div>
+        
+    </div>
+
+</body>
+
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        border: solid black 3px;
+        width: 400px;
+        height: 400px;
+        margin: 10px;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 10px;
+        margin: 20px;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+// Tableau de musiques avec leurs couvertures d'album
+const musiques = [
+    { titre: "Musique 1", couverture: "placeholder/rose.png" },
+    { titre: "Musique 2", couverture: "placeholder/bleu.png" },
+    { titre: "Musique 3", couverture: "placeholder/Fushia.png" },
+    { titre: "Musique 4", couverture: "placeholder/Sable.png" },
+    { titre: "Musique 5", couverture: "placeholder/Marron.png" },
+    { titre: "Musique 6", couverture: "placeholder/orange.png" }
+];
+
+let ProchainRound = [];
+
+
+
+
+//-----------------------------------------------// FONCTIONS //-----------------------------------------------//
+
+
+// Fonction pour choisir deux musiques aléatoires et afficher leurs couvertures
+function startBattle() {
+    // Choisir deux indices aléatoires
+    let index1 = Math.floor(Math.random() * musiques.length);
+    let index2 = Math.floor(Math.random() * musiques.length);
+    
+    // S'assurer que les deux musiques sont différentes
+    while (index1 === index2) {
+        index2 = Math.floor(Math.random() * musiques.length);
+    }
+    while (index1 === index2) {
+        index2 = Math.floor(Math.random() * musiques.length);
+    }
+
+    // Récupérer les musiques choisies
+    const musique1 = musiques[index1];
+    const musique2 = musiques[index2];
+
+    // Afficher les couvertures des deux musiques dans les balises <img>
+    document.getElementById('CoverMusique1').src = musique1.couverture;
+    document.getElementById('CoverMusique1').alt = musique1.titre;
+
+    document.getElementById('CoverMusique2').src = musique2.couverture;
+    document.getElementById('CoverMusique2').alt = musique2.titre;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Hello World!");
+  startBattle();
+});
+
+function selectRound(values){
+    console.log (values);
+    ProchainRound=[values];
+    console.table (ProchainRound);
+    startBattle();
+}
+
+
+//-----------------------------------------------//CLICS GESTION //-----------------------------------------------//
+document.getElementById('CoverMusique1').addEventListener('click', function() {
+    selectRound(this.alt);
+});
+
+document.getElementById('CoverMusique2').addEventListener('click', function() {
+    selectRound(this.alt);
+});
+
+</script>
+
+</html>

@@ -1,3 +1,3 @@
 document.getElementById('fightButton').addEventListener('click', function() {
-    alert('Fight button clicked!');
+    window.location.href = '../Html/TuPreferes.html';
 });
