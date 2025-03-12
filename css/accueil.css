@@ -8,12 +8,11 @@ html, body {
 }
 
 /*HEADER*/
-header > img {
+header > a > img {
     width: 10%;
     height: 10%;
     padding: 15px;
 }
-
 /*NAVBAR*/
 .navbar, nav, ul{
     list-style: none;

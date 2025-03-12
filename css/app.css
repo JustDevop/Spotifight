@@ -11,7 +11,7 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
-header > img {
+header > a > img {
     width: 10%;
     height: 10%;
     padding: 15px;
