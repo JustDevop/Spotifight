@@ -46,80 +46,114 @@
 </style>
 
 <script>
-const MUSIQUES = [
-    { titre: "Musique 1/Rose", couverture: "placeholder/rose.png", points: 0 },
-    { titre: "Musique 2/Bleu", couverture: "placeholder/bleu.png", points: 0 },
-    { titre: "Musique 3/Fushia", couverture: "placeholder/fushia.png", points: 0 },
-    { titre: "Musique 4/Sable", couverture: "placeholder/sable.png", points: 0 },
-    { titre: "Musique 5/Marron", couverture: "placeholder/marron.png", points: 0 },
-    { titre: "Musique 6/Orange", couverture: "placeholder/orange.png", points: 0 }
-];
+// Fonction pour charger les musiques depuis un fichier JSON
+function fetchMusiques(callback) {
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "musiques.json", true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                try {
+                    const data = JSON.parse(xhr.responseText);
+                    const musiques = [];
+                    let index = 1;
 
-let Round = [...MUSIQUES];
+                    // Parcours des données JSON pour structurer les musiques
+                    for (const person in data) {
+                        if (data.hasOwnProperty(person)) {
+                            data[person].musiques.forEach(function (musique) {
+                                musiques.push({
+                                    titre: musique.titre,
+                                    couverture: musique.image,
+                                    membre: person,
+                                    points: 0, // Initialisation des points
+                                    index: index
+                                });
+                                index++;
+                            });
+                        }
+                    }
+
+                    callback(musiques); // Appelle le callback avec la liste formatée
+                } catch (error) {
+                    console.error("Erreur lors du parsing du JSON :", error);
+                }
+            } else {
+                console.error("Erreur lors du chargement du fichier JSON :", xhr.status, xhr.statusText);
+            }
+        }
+    };
+
+    xhr.onerror = function () {
+        console.error("Erreur réseau ou problème lors de la requête.");
+    };
+
+    xhr.send();
+}
+
+// Variables pour gérer le jeu
+let MUSIQUES = [];
+let Round = [];
 let ProchainRound = [];
 let Historique = [];
+
+// Fonction principale pour démarrer le jeu une fois les musiques chargées
+function startGame() {
+    Round = [...MUSIQUES];
+    startBattle();
+}
 
 //-----------------------------------------------// FONCTIONS //-----------------------------------------------//
 
 function startBattle() {
-    // Si une seule musique reste et c'est la finale, afficher le vainqueur
     if (Round.length === 1) {
         afficherClassement();
         return;
     }
 
-    // Si une seule musique reste dans un round impair, elle est qualifiée directement
     if (Round.length % 2 !== 0 && Historique.length === 0) {
-        const lastMusique = Round.pop(); // Retirer la dernière musique du round
+        const lastMusique = Round.pop();
         console.log("Musique qualifiée automatiquement :", lastMusique.titre);
         ProchainRound.push(lastMusique);
     }
 
-    // Obtenir des indices de musiques qui ne sont pas dans l'historique
     const indicesDisponibles = Round.map((_, i) => i).filter(i => !Historique.includes(i));
 
-    // Si moins de deux musiques disponibles, passer au prochain round
     if (indicesDisponibles.length < 2) {
-        Historique = []; // Réinitialiser l'historique pour le prochain round
+        Historique = [];
         Round = [...ProchainRound];
         ProchainRound = [];
         startBattle();
         return;
     }
 
-    // Sélectionner deux indices distincts
     const index1 = indicesDisponibles[Math.floor(Math.random() * indicesDisponibles.length)];
     let index2;
     do {
         index2 = indicesDisponibles[Math.floor(Math.random() * indicesDisponibles.length)];
     } while (index1 === index2);
 
-    // Récupérer les musiques correspondantes
     const MUSIQUE1 = Round[index1];
     const MUSIQUE2 = Round[index2];
 
-    // Afficher les musiques sélectionnées
     document.getElementById('CoverMusique1').src = MUSIQUE1.couverture;
     document.getElementById('titre1').textContent = MUSIQUE1.titre;
 
     document.getElementById('CoverMusique2').src = MUSIQUE2.couverture;
     document.getElementById('titre2').textContent = MUSIQUE2.titre;
 
-    // Ajouter les indices sélectionnés à l'historique
     Historique.push(index1, index2);
 }
 
 function selectRound(titreSelectionne) {
-    // Trouver et ajouter la musique sélectionnée au prochain round
     const musiqueSelectionnee = Round.find(m => m.titre === titreSelectionne);
     if (musiqueSelectionnee) {
-        musiqueSelectionnee.points++; // Ajouter un point à la musique sélectionnée
+        musiqueSelectionnee.points++;
         ProchainRound.push(musiqueSelectionnee);
     }
 
-    // Démarrer le prochain duel si nécessaire
     if (Historique.length >= Round.length) {
-        Historique = []; // Réinitialiser l'historique
+        Historique = [];
         Round = [...ProchainRound];
         ProchainRound = [];
     }
@@ -127,14 +161,11 @@ function selectRound(titreSelectionne) {
 }
 
 function afficherClassement() {
-    // Trier les musiques par points décroissants
     const classement = MUSIQUES.sort((a, b) => b.points - a.points);
 
-    // Modifier le texte pour annoncer le classement final
     document.querySelector("h1").textContent = "Classement Final !";
     document.querySelector("h2").textContent = "Voici la liste des musiques classées par vote :";
 
-    // Afficher le classement final
     let classementHTML = "<ol>";
     classement.forEach(musique => {
         classementHTML += `<li>${musique.titre} - ${musique.points} points</li>`;
@@ -145,21 +176,23 @@ function afficherClassement() {
     divClassement.innerHTML = classementHTML;
     document.body.appendChild(divClassement);
 
-    // Cacher les images du BattleZone
     document.getElementById("BattleZone").style.display = "none";
 }
 
 //-----------------------------------------------// GESTION DOCUMENT //-----------------------------------------------//
 
 document.addEventListener("DOMContentLoaded", () => {
-    startBattle();
+    fetchMusiques(function (musiques) {
+        MUSIQUES = musiques; // Assignation des données
+        startGame(); // Lancement du jeu
+    });
 });
 
-document.getElementById('CoverMusique1').addEventListener('click', function() {
+document.getElementById('CoverMusique1').addEventListener('click', function () {
     selectRound(document.getElementById('titre1').textContent);
 });
 
-document.getElementById('CoverMusique2').addEventListener('click', function() {
+document.getElementById('CoverMusique2').addEventListener('click', function () {
     selectRound(document.getElementById('titre2').textContent);
 });
 </script>
