@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/app.css">
-    <title>Spotifight</title>
+    <link rel="stylesheet" href="css/index.css">
+    <title>Départ</title>
 </head>
 <body>
-
-    <header>
-        <img src="logo/spotifightLogo.png" alt="logo Spotifight">
-    </header>
-
-    <div class="presentation">
-        <h1>Spotifight</h1>
-        <h3>Choisis ton son, défends ta vibe !</h3>
+    <div class="loading">
+        <svg width="100" height="100" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="40" stroke="#1ED760" stroke-width="8" fill="none" stroke-dasharray="200" stroke-dashoffset="0">
+                <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="2s" repeatCount="indefinite"/>
+            </circle>
+        </svg>
     </div>
 
-    
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                window.location.href = 'Html/accueil.html';
+            }, 1500); // 3 seconds delay for demonstration
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,11 @@
+html, body {
+    background-color: #121212;
+}
+
+.loading {
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1ed760;
+}

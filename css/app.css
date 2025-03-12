@@ -11,6 +11,42 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
+header > img {
+    width: 10%;
+    height: 10%;
+    padding: 15px;
+}
+
+/*NAVBAR*/
+.navbar, nav, ul{
+    list-style: none;
+}
+
+ul {
+    float: right;
+    margin-top: -6%;
+}
+
+li{
+    display: inline;
+    padding: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #1ED760;
+    font-family: bots;
+    font-size: 20px;
+    transition: color .3s, text-shadow .3s;
+}
+
+a:hover {
+    color: #1ED760;
+    text-shadow: 0 0 1px #0e9e4a, 0 0 2px #0e9e4a, 0 0 3px #0e9e4a, 0 0 4px #0e9e4a, 0 0 5px #0e9e4a, 0 0 6px #0e9e4a, 0 0 7px #0e9e4a;
+    
+}
+
+
 h1, h2 {
     color: #1ED760;
     text-align: center;
